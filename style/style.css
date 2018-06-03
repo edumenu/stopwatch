@@ -76,7 +76,7 @@ body{
 }
 
 /*Buttons*/
-.control{
+#start_button, #resume_button{
    text-align: center;
    color: aliceblue;
    padding: 20% 0;
@@ -121,4 +121,52 @@ body{
 .laptimes{
     font-size: 2em;
     float: right;
+}
+
+/*Stop button*/
+#stop_button{
+    text-align: center;
+   color: aliceblue;
+   padding: 20% 0;
+   font-size: 1.5em;
+   width: 5em;
+   height: 5em;
+   background: #640b0b;
+   margin: 1em;
+   border-radius: 100%;
+   box-shadow: inset 0px 0px 0px 3px white;
+   border: 3px solid #640b0b;
+    cursor: pointer;    
+}
+
+/*Reset button*/
+#reset_button{
+    text-align: center;
+   color: aliceblue;
+   padding: 20% 0;
+   font-size: 1.5em;
+   width: 5em;
+   height: 5em;
+   background: #111111;
+   margin: 1em;
+   border-radius: 100%;
+   box-shadow: inset 0px 0px 0px 3px white;
+   border: 3px solid #111111;
+    cursor: pointer;    
+}
+
+/*Lap button*/
+#lap_button{
+    text-align: center;
+   color: aliceblue;
+   padding: 20% 0;
+   font-size: 1.5em;
+   width: 5em;
+   height: 5em;
+   background: #111111;
+   margin: 1em;
+   border-radius: 100%;
+   box-shadow: inset 0px 0px 0px 3px white;
+   border: 3px solid #111111;
+    cursor: pointer;    
 }
