@@ -1,3 +1,7 @@
+//Created by: Edem Dumenu
+//Date: 5/30/2018
+//Description: Stop Watch
+
 $(function(){
    $('#collapse3').collapse('toggle');
     
@@ -5,7 +9,7 @@ $(function(){
     var mode = 0;  //App mode
     var timeCounter = 0 //Time counter
     var lapCounter = 0 //Lap counter
-    var action;  //variable for ssetInterval
+    var action;  //variable for setInterval
     var lapNumber = 0; //Number of laps
     //Minutes, seconds, centiseconds for time and lap
     var timeMinutes, timeSeconds, timeCentiseconds, lapMinutes, lapSeconds, lapCentiseconds;
@@ -25,7 +29,6 @@ $(function(){
          startAction();
      });
     
-    
     //Clicking on the stop button
     $("#stop_button").click(function(){
        //show the resume and reset buttons
@@ -33,7 +36,6 @@ $(function(){
         
        //Stop counter
         clearInterval(action);    
-        
     });
     
     //Clicking on the resume button
@@ -43,7 +45,6 @@ $(function(){
         
        //Start counter
         startAction();    
-        
     });
     
       //Clicking on the reset button
@@ -69,13 +70,7 @@ $(function(){
           }
            //resetLap and print lap buttons
            //start action
-            
       });
-    
-    
-    
-    
-    
     
     //Function to hide and show 2 buttons
     function hideshowButtons(x, y){
@@ -143,12 +138,13 @@ $(function(){
     
     //Function to print the lap details 
     function addLap(){
+        //Increment the number every time the lap button has been selected
         lapNumber++;
        var lapDetails = "<div class='lap'>"
                         + "<div class='lap_time_title'>Lap " + lapNumber + "</div>" 
                            + "<div class='laptimes'><span>"+ format(lapMinutes) +"</span>:<span>"+ format(lapSeconds) +"</span>:<span>"+ format(lapCentiseconds) +"</span></div>" 
                               +"</div>";
+       //Add to the list of laps    
        $(lapDetails).appendTo("#laps_collapse");
-    }
-    
+    } 
 });
