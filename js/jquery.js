@@ -27,6 +27,9 @@ $(function(){
          
         //Start counter 
          startAction();
+         
+         //Play sound 
+        document.getElementById("beep_sound").play();  
      });
     
     //Clicking on the stop button
@@ -35,7 +38,8 @@ $(function(){
         hideshowButtons("#resume_button","#reset_button");
         
        //Stop counter
-        clearInterval(action);    
+        clearInterval(action);  
+         
     });
     
     //Clicking on the resume button
@@ -44,7 +48,10 @@ $(function(){
         hideshowButtons("#stop_button","#lap_button");
         
        //Start counter
-        startAction();    
+        startAction(); 
+          
+         //Play sound 
+        document.getElementById("beep_sound").play();  
     });
     
       //Clicking on the reset button
