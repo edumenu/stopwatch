@@ -1,0 +1,70 @@
+<!--
+Created by: Edem Dumenu
+Date: 5/30/2018
+Description: Stop Watch
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Slice Game</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable=yes>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style/style.css"> 
+ </head>
+
+<body>
+     <!-- Main container -->
+     <div class="container">
+      
+      <!-- Header -->
+      <div class="alert alert-success text-center header"><h1>Stop Watch</h1></div>
+      
+      <!-- Time -->
+      <div id="time">
+      <span id="timeminute">00</span>:<span id="timesecond">00</span>:<span id="timecentisecond">00</span>
+      </div>
+      <!-- /Time -->
+      
+      <!-- Lap time-->
+      <div id="lap_time">
+      <span id="lapminute">00</span>:<span id="lapsecond">00</span>:<span id="lapcentisecond">00</span>
+      </div>
+      <!-- /Lap time -->
+      
+      <div id="controlsContainer" class="row">
+          <div class="col-xs-6 col-xs-offset-1">
+            <div id="start_button" class="control">Start</div>  
+            <div id="stop_button" class="control">Stop</div>  
+            <div id="resume_button" class="control">Resume</div>
+          </div>
+           <div class="col-xs-5">
+            <div id="lap_button" class="control">Lap</div>  
+            <div id="reset_button" class="control">Reset</div>  
+          </div>
+      </div>
+      
+      <!-- Laps collapse -->
+      <div id="laps_collapse">Edem</div>
+
+    </div>
+     
+      <!-- /Main container --> 
+    <!-- Audio files -->
+<!--
+    <audio id="slice_sound">
+        <source src="audio/slice.mp3">
+        <source src="audio/slice.ogg">
+    </audio>
+-->
+    
+    <!-- jQuery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- Javascript file -->
+    <script src="js/jquery.js"></script>
+</body>
+
+</html>
