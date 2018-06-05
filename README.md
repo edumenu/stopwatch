@@ -5,6 +5,6 @@ audio/ This folder contains all audio files for the application
 
 images/ This folder contains all the images for the application
 
-js/ This contains script files for the application 
+js/ This contains javaScript files for the application 
 
 style/ This folder contains the css files for styling the application 
