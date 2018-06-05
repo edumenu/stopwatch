@@ -32,11 +32,76 @@ body{
     }
 }
 
+/*Button header*/
 .header{
-    color: whitesmoke;
+   margin-left: 13%;
+    font-family: Courier, monospace;
+}
+
+.stop_watch_button{
+    color: green;
     background: rgba(0,0,0,0.2);
-    border: none;
-    margin-top: 0;
+    font-size: 30px;
+    border-color: green;
+    border-radius: 20px;
+}
+
+.stop_watch_button:active{
+    color: white;
+    background: #032f03;
+    font-size: 30px;
+    border-radius: 20px;
+    border-color: #032f03;
+}
+
+.stop_watch_button:focus{
+    color: white;
+    background: #032f03;
+    font-size: 30px;
+    border-radius: 20px;
+    border-color: #032f03;
+    outline: none;
+}
+
+.stop_watch_button:hover{
+    color: white;
+    background: #032f03;
+    font-size: 30px;
+    border-radius: 20px;
+    border-color: #032f03;
+}
+
+.timer_button{
+    color: darkblue;
+    background: rgba(0,0,0,0.2);
+    font-size: 30px;
+    border-color: darkblue;
+    border-radius: 20px;
+}
+
+.timer_button:hover{
+    color: white;
+    background: #030e52;
+    font-size: 30px;
+    border-radius: 20px;
+    border-color: #030e52;
+}
+
+.timer_button:active{
+      color: white;
+    background: #030e52;
+    font-size: 30px;
+    border-radius: 20px;
+    border-color: #030e52;
+}
+
+.timer_button:focus{
+      color: white;
+    background: #030e52;
+    font-size: 30px;
+    border-radius: 20px;
+    border-color: #030e52;
+    outline: none;
 }
 
 /*Time*/
@@ -45,6 +110,15 @@ body{
     text-align: center;
     margin: 10% auto 0;
     color: aliceblue;
+}
+
+/*Timer*/
+#timer{
+    font-size: 9em;
+    text-align: center;
+    margin: 10% auto 0;
+    color: aliceblue;
+    display: none;
 }
 
 /*Lap Time*/
@@ -76,7 +150,7 @@ body{
 }
 
 /*Buttons*/
-#start_button, #resume_button{
+#start_button,#start_button_timer, #resume_button, #resume_button_timer{
    text-align: center;
    color: aliceblue;
    padding: 20% 0;
@@ -124,7 +198,7 @@ body{
 }
 
 /*Stop button*/
-#stop_button{
+#stop_button, #stop_button_timer{
     text-align: center;
    color: aliceblue;
    padding: 20% 0;
@@ -136,12 +210,12 @@ body{
    border-radius: 100%;
    box-shadow: inset 0px 0px 0px 3px white;
    border: 3px solid #640b0b;
-    cursor: pointer;    
+   cursor: pointer;    
 }
 
 /*Reset button*/
-#reset_button{
-    text-align: center;
+#reset_button, #reset_button_timer{
+   text-align: center;
    color: aliceblue;
    padding: 20% 0;
    font-size: 1.5em;

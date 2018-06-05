@@ -6,7 +6,7 @@ Description: Stop Watch
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Slice Game</title>
+  <title>Stop Watch</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable=yes>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,13 +20,23 @@ Description: Stop Watch
      <div class="container">
       
       <!-- Header -->
-      <div class="alert alert-success text-center header"><h1>Stop Watch</h1></div>
+         <h1 class="text-center select_one" style="color: aliceblue; font-family: Courier, monospace;">Select One</h1>
+     <div class="btn-group col-md-12 text-center header" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-lg stop_watch_button" data-toggle="tooltip">Stop Watch</button>
+      <button type="button" class="btn btn-lg timer_button">Timer</button>
+    </div>
       
       <!-- Time -->
       <div id="time">
       <span id="timeminute">00</span>:<span id="timesecond">00</span>:<span id="timecentisecond">00</span>
       </div>
       <!-- /Time -->
+      
+      <!-- Timer -->
+      <div id="timer">
+      <span id="timerminute">00</span>:<span id="timersecond">00</span>
+      </div>
+      <!-- /Timer -->
       
       <!-- Lap time-->
       <div id="lap_time">
@@ -38,12 +48,16 @@ Description: Stop Watch
       <div id="controlsContainer" class="row">
           <div class="col-xs-5 col-xs-offset-1">
             <div id="start_button" class="control">Start</div>  
-            <div id="stop_button" class="control">Stop</div>  
+            <div id="start_button_timer" class="control"  data-toggle="modal" data-target=".bd-example-modal-sm">Start</div>  
+            <div id="stop_button" class="control">Stop</div>   
+            <div id="stop_button_timer" class="control">Stop</div>   
             <div id="resume_button" class="control">Resume</div>
+            <div id="resume_button_timer" class="control">Resume</div>
           </div>
            <div class="col-xs-5 col-xs-offset-1">
             <div id="lap_button" class="control">Lap</div>  
             <div id="reset_button" class="control">Reset</div>  
+            <div id="reset_button_timer" class="control">Reset</div>  
           </div>
       </div>
       <!-- /Buttons container -->
@@ -55,10 +69,20 @@ Description: Stop Watch
       <!-- /Main container --> 
       
     <!-- Audio files -->
-    <audio id="slice_sound">
+    <audio id="beep_sound">
         <source src="audio/beep.mp3">
         <source src="audio/beep.ogg">
     </audio>
+    
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-sm">
+       <div class="modal-content">
+       <h2 class="text-center" style="border-bottom: 3px solid black;">Enter minutes</h2>
+        <h3 style="margin-left: 0.5em;">Minutes: <input id="timer_minutes" type="text" style="width: 2em; margin-top: 0.5em">  <button type="button" class="btn btn-success" id="ok_timer" data-dismiss="modal">Ok</button></h3>
+        </div>
+      </div>
+    </div>
     
     <!-- jQuery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
