@@ -38,6 +38,7 @@ body{
     font-family: Courier, monospace;
 }
 
+/*stop wath button*/
 .stop_watch_button{
     color: green;
     background: rgba(0,0,0,0.2);
@@ -71,6 +72,7 @@ body{
     border-color: #032f03;
 }
 
+/*timer navigation button*/
 .timer_button{
     color: darkblue;
     background: rgba(0,0,0,0.2);
@@ -104,7 +106,7 @@ body{
     outline: none;
 }
 
-/*Time*/
+/*Time display*/
 #time{
     font-size: 9em;
     text-align: center;
@@ -112,7 +114,7 @@ body{
     color: aliceblue;
 }
 
-/*Timer*/
+/*Timer display*/
 #timer{
     font-size: 9em;
     text-align: center;

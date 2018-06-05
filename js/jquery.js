@@ -18,14 +18,7 @@ $(function(){
     var timer_minutes,timer_seconds,input_timer = 5;
     
     //Hide everything
-    hideEverthing();
-
-    //Click on timer button, display timer buttons
-      //Display timer modal
-         //Input time
-      //Start time
-    
-    
+    hideEverthing();    
     
     $(".stop_watch_button").click(function(){
         
@@ -103,8 +96,6 @@ $(function(){
             //Start the action
             startAction();  
           }
-           //resetLap and print lap buttons
-           //start action
       });
         
     });    
@@ -119,10 +110,10 @@ $(function(){
          //stop action
         clearInterval(action);
          
-       hideshowButtons("#start_button_timer","#reset_button_timer", "timer"); 
+        hideshowButtons("#start_button_timer","#reset_button_timer", "timer"); 
        $("#laps_collapse").hide();
         
-      $(".stop_watch_button").unbind().click(function(){ 
+       $(".stop_watch_button").unbind().click(function(){ 
            $("#timer").hide();
             //Hide everything
             hideEverthing();
@@ -138,8 +129,8 @@ $(function(){
       //Click on the ok button
       $("#ok_timer").click(function(){
          
-           //Assigning 1 to the timer mode
-           mode_timer = 1;
+          //Assigning 1 to the timer mode
+          mode_timer = 1;
           
           //Obtain the value in the input box
           input_timer = $("#timer_minutes").val();
@@ -151,7 +142,6 @@ $(function(){
           //Display stop
           hideshowButtons("#stop_button_timer", "#reset_button_timer", "timer");
 
-          
           $("#stop_button_timer").click(function(){
              if(mode_timer == 1){
                  
@@ -178,15 +168,13 @@ $(function(){
         
      //Click on start after clicking on stop
      $("#reset_button_timer").click(function(){
-         
         //Reload the page
         location.reload();
-     });    
-        
+     });       
   });
     
-    //Function to hide and show 2 buttons
-    function hideshowButtons(x, y, z){
+   //Function to hide and show 2 buttons
+   function hideshowButtons(x, y, z){
         if(z == "stop_watch"){
             $(".control").hide();
             $("#time").show();
@@ -273,6 +261,7 @@ $(function(){
        //1sec=100centiseconds
        timer_seconds = Math.floor((input_timer%6000)/100) //remainder of input_timer/600 divided by 100.
         
+        //Display time on timer page
        $("#timerminute").text(format(timer_minutes));
        $("#timersecond").text(format(timer_seconds));    
         
